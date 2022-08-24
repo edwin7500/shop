@@ -45,10 +45,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
+            this.unameTb = new System.Windows.Forms.MaskedTextBox();
+            this.PhoneTb = new System.Windows.Forms.MaskedTextBox();
+            this.PasswordTb = new System.Windows.Forms.MaskedTextBox();
+            this.FnameTb = new System.Windows.Forms.MaskedTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -198,41 +198,41 @@
             this.label4.Text = "INVENTORY MANAGEMENT SYSTEM";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // maskedTextBox5
+            // unameTb
             // 
-            this.maskedTextBox5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox5.Location = new System.Drawing.Point(12, 106);
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(208, 22);
-            this.maskedTextBox5.TabIndex = 1;
-            this.maskedTextBox5.Text = "username";
+            this.unameTb.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.unameTb.Location = new System.Drawing.Point(12, 106);
+            this.unameTb.Name = "unameTb";
+            this.unameTb.Size = new System.Drawing.Size(208, 22);
+            this.unameTb.TabIndex = 1;
+            this.unameTb.Text = "username";
             // 
-            // maskedTextBox6
+            // PhoneTb
             // 
-            this.maskedTextBox6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox6.Location = new System.Drawing.Point(12, 225);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(208, 22);
-            this.maskedTextBox6.TabIndex = 2;
-            this.maskedTextBox6.Text = "telephone";
+            this.PhoneTb.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PhoneTb.Location = new System.Drawing.Point(12, 225);
+            this.PhoneTb.Name = "PhoneTb";
+            this.PhoneTb.Size = new System.Drawing.Size(208, 22);
+            this.PhoneTb.TabIndex = 2;
+            this.PhoneTb.Text = "telephone";
             // 
-            // maskedTextBox7
+            // PasswordTb
             // 
-            this.maskedTextBox7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox7.Location = new System.Drawing.Point(12, 184);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(208, 22);
-            this.maskedTextBox7.TabIndex = 3;
-            this.maskedTextBox7.Text = "password";
+            this.PasswordTb.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordTb.Location = new System.Drawing.Point(12, 184);
+            this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.Size = new System.Drawing.Size(208, 22);
+            this.PasswordTb.TabIndex = 3;
+            this.PasswordTb.Text = "password";
             // 
-            // maskedTextBox8
+            // FnameTb
             // 
-            this.maskedTextBox8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox8.Location = new System.Drawing.Point(12, 145);
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(208, 22);
-            this.maskedTextBox8.TabIndex = 4;
-            this.maskedTextBox8.Text = "full name";
+            this.FnameTb.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FnameTb.Location = new System.Drawing.Point(12, 145);
+            this.FnameTb.Name = "FnameTb";
+            this.FnameTb.Size = new System.Drawing.Size(208, 22);
+            this.FnameTb.TabIndex = 4;
+            this.FnameTb.Text = "full name";
             // 
             // button4
             // 
@@ -243,6 +243,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "add";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -290,10 +291,10 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.maskedTextBox8);
-            this.Controls.Add(this.maskedTextBox7);
-            this.Controls.Add(this.maskedTextBox6);
-            this.Controls.Add(this.maskedTextBox5);
+            this.Controls.Add(this.FnameTb);
+            this.Controls.Add(this.PasswordTb);
+            this.Controls.Add(this.PhoneTb);
+            this.Controls.Add(this.unameTb);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Name = "User";
@@ -327,10 +328,10 @@
         private Label label4;
         private Label label6;
         private Label label5;
-        private MaskedTextBox maskedTextBox5;
-        private MaskedTextBox maskedTextBox6;
-        private MaskedTextBox maskedTextBox7;
-        private MaskedTextBox maskedTextBox8;
+        private MaskedTextBox unameTb;
+        private MaskedTextBox PhoneTb;
+        private MaskedTextBox PasswordTb;
+        private MaskedTextBox FnameTb;
         private Button button4;
         private Button button6;
         private Button button7;
