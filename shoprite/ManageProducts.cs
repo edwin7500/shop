@@ -176,6 +176,13 @@ namespace shoprite
             populate();
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
     }
 }
 

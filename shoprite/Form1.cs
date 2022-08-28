@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace shoprite
 {
@@ -16,6 +17,8 @@ namespace shoprite
         {
             InitializeComponent();
         }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\edwin\Documents\shopdb.mdf;Integrated Security=True;Connect Timeout=30");
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,6 +45,30 @@ namespace shoprite
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from UserTbl where Uname = '" + unameTb.Text + "' and Upassword = '" + passwordTb.Text + "'", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                Home home = new Home();
+                home.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Username or Password");
+            }
+            Con.Close();
+        }
+
+       // private SqlDataAdapter SqlDataAdapter(string v, SqlConnection con)
+       // {
+            //throw new NotImplementedException();
+        //}
     }
     
 }

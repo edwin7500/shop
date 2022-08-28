@@ -232,6 +232,13 @@ namespace shoprite
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
             Application.Exit();

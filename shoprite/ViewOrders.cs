@@ -59,7 +59,21 @@ namespace shoprite
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-           // e.Graphics.DrawString("Oder summary", new Font("Century", 25), FontStyle.Bold),Brushes.Red,new Point(230));
+           e.Graphics.DrawString("Order summary", new Font("Century", 25, FontStyle.Bold),Brushes.Red,new Point(230));
+            e.Graphics.DrawString("Order Id:" +OrdersGV.SelectedRows[0].Cells[0].Value.ToString(), new Font("Century", 20, FontStyle.Regular), Brushes.Black, new Point(80,150));
+            e.Graphics.DrawString("Customer Id:" + OrdersGV.SelectedRows[0].Cells[1].Value.ToString(), new Font("Century", 20, FontStyle.Regular), Brushes.Black, new Point(80, 110));
+            e.Graphics.DrawString("Customer Name:" + OrdersGV.SelectedRows[0].Cells[2].Value.ToString(), new Font("Century", 20, FontStyle.Regular), Brushes.Black, new Point(80, 190));
+            e.Graphics.DrawString("Order Date:" + OrdersGV.SelectedRows[0].Cells[3].Value.ToString(), new Font("Century", 20, FontStyle.Regular), Brushes.Black, new Point(80, 230));
+            e.Graphics.DrawString("Customer Id:" + OrdersGV.SelectedRows[0].Cells[4].Value.ToString(), new Font("Century", 20, FontStyle.Regular), Brushes.Black, new Point(80, 270));
+            e.Graphics.DrawString("POWERED BY SHOPRITE", new Font("Century", 25, FontStyle.Bold), Brushes.Red, new Point(230,350));
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
         }
     }
 }

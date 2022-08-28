@@ -130,5 +130,12 @@ namespace shoprite
             PasswordTb.Text = UsersGV.SelectedRows[0].Cells[2].Value.ToString();
             PhoneTb.Text = UsersGV.SelectedRows[0].Cells[3].Value.ToString();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
     }
 }

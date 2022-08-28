@@ -17,3 +17,4 @@ C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.Category.
 C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.ManageProducts.resources
 C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.ManageOrders.resources
 C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.ViewOrders.resources
+C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.Home.resources
