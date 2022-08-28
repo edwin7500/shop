@@ -87,18 +87,20 @@ namespace shoprite
             }
         }
         void updateproduct()
+
         {
-            int id = Convert.ToInt32(ProductGV.SelectedRows[0].Cells[1].Value.ToString());
+           
+
+            int id = Convert.ToInt32(ProductGV.SelectedRows[0].Cells[0].Value.ToString());
             int newQty = stock - Convert.ToInt32(QtyTb.Text);
             if (newQty < 0)
             {
                 MessageBox.Show("Operation Failed");
             }
             else
-            {
+           {
                 Con.Open();
-
-                string query = "update ProductTbl set ProQty = " + newQty + "where ProId" + id + ";";
+                string query = "update ProductTbl set ProQty = " + newQty + "where ProId" + id + ";";   
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.ExecuteNonQuery();
                 Con.Close();
@@ -142,14 +144,13 @@ namespace shoprite
 
 
         }
-        int sum = 0;
+      
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int sum = 0;
             if (QtyTb.Text == "")
                 MessageBox.Show("Enter The Quantity Of Products");
-
             else if(flag == 0)
             {
                 MessageBox.Show("Selects the Products");
@@ -171,8 +172,8 @@ namespace shoprite
             }
 
             sum = sum + totprice;
-            TotAmount.Text = "Rs" + sum.ToString();
-            updateproduct();
+            TotAmount.Text = sum.ToString();
+            //updateproduct();
         }
 
         private void CustomersGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -190,7 +191,7 @@ namespace shoprite
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (OrderIdTb.Text == "" || Cid.Text ==""|| CustName.Text ==""||TotAmount.Text =="" )
+            if (OrderIdTb.Text == "" || Cid.Text =="" || CustName.Text =="" || TotAmount.Text =="" )
             {
                 MessageBox.Show("Fill The data Correctly");
             }
@@ -223,6 +224,11 @@ namespace shoprite
         {
             ViewOrders view = new ViewOrders();
             view.Show();
+
+        }
+
+        private void OrderIdTb_OnValueChanged(object sender, EventArgs e)
+        {
 
         }
 

@@ -47,5 +47,19 @@ namespace shoprite
         {
             this.Hide();
         }
+
+        private void OrdersGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+                
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+           // e.Graphics.DrawString("Oder summary", new Font("Century", 25), FontStyle.Bold),Brushes.Red,new Point(230));
+        }
     }
 }

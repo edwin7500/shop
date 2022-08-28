@@ -37,6 +37,11 @@ namespace shoprite
         {
 
         }
+
+        private void passwordTb_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

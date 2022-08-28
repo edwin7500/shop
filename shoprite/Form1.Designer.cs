@@ -114,6 +114,7 @@ namespace shoprite
             this.passwordTb.TabIndex = 1;
             this.passwordTb.Text = "Password";
             this.passwordTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.passwordTb.OnValueChanged += new System.EventHandler(this.passwordTb_OnValueChanged);
             // 
             // unameTb
             // 
