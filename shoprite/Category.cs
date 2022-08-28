@@ -39,7 +39,8 @@ namespace shoprite
         }
         private void CategoriesGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            CatidTb.Text = CategoriesGV.SelectedRows[0].Cells[0].Value.ToString();
+            CatNameTb.Text = CategoriesGV.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,6 +83,30 @@ namespace shoprite
                 populate();
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("update CategoryTbl set CatName='" + CatNameTb.Text + "' where CatId='" + CatidTb.Text + "'", Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Category Successfully Updated");
+                Con.Close();
+                populate();
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void Category_Load(object sender, EventArgs e)
+        {
+            populate();
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace shoprite
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Category());
+            Application.Run(new ManageOrders());
         }
     }
 }

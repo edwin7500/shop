@@ -14,3 +14,6 @@ C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.manage.re
 C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.Mainform.resources
 C:\Users\edwin\source\repos\inventory\shop\shoprite\bin\Debug\Guna.UI.dll
 C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.Category.resources
+C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.ManageProducts.resources
+C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.ManageOrders.resources
+C:\Users\edwin\source\repos\inventory\shop\shoprite\obj\Debug\shoprite.ViewOrders.resources

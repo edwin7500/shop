@@ -77,6 +77,21 @@ namespace shoprite
             customerid.Text = CustomersGV.SelectedRows[0].Cells[0].Value.ToString();
            customername.Text = CustomersGV.SelectedRows[0].Cells[1].Value.ToString();
            customerphone.Text =CustomersGV.SelectedRows[0].Cells[2].Value.ToString();
+            Con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from OrdersTbl where CustId =" + customerid.Text + "", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            Orderlabel.Text = dt.Rows[0][0].ToString();
+            SqlDataAdapter sda1 = new SqlDataAdapter("Select Sum(TotalAmt) from OrdersTbl where CustId =" + customerid.Text + "", Con);
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            AmountLabel.Text = dt1.Rows[0][0].ToString();
+
+            SqlDataAdapter sda2 = new SqlDataAdapter("Select Max(OrderDate) from OrdersTbl where CustId =" + customerid.Text + "", Con);
+            DataTable dt2 = new DataTable();
+            sda2.Fill(dt2);
+            DateLabel.Text = dt2.Rows[0][0].ToString();
+            Con.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -114,6 +129,21 @@ namespace shoprite
             {
 
             }
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
