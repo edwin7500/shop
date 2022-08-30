@@ -63,5 +63,17 @@ namespace shoprite
             login.Show();
             this.Hide();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            ViewOrders view = new ViewOrders();
+            view.Show();
+            this.Hide();
+        }
     }
 }
